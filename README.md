@@ -1,4 +1,4 @@
 # kalkulacja_skladki
-Aplikacja działającą w oknie przeglądarki, służącą kalkulacji składki
+Aplikacja działająca w oknie przeglądarki, służąca kalkulacji składki
 ubezpieczeniowej. Użytkownik wprowadza dane wejściowe (sumę ubezpieczenia,
 informacje o zniżkach/ zwyżkach).
