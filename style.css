@@ -1,0 +1,71 @@
+body{
+		font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+	margin-bottom: 0;
+    border-radius: 0;
+	background-color:white;
+	border-bottom:2px solid black;
+	float:none;
+}
+
+.navbar-default .container-fluid .navbar-collapse ul li a {
+	font-weight:700;
+}
+
+.navbar-default .container-fluid .navbar-header a {
+	color:black;
+}
+
+#menu {
+	color:black;
+	font-weight:700;
+	border:none;
+	top:-3px;
+	left:-20px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-default .navbar-toggle{
+    border:none;        
+}
+
+#menu:hover{
+	background-color:inherit;
+}
+
+.navbar-brand {
+	width: 100%;
+	left: 0;
+	text-align: center;
+	margin:0 auto;
+	font-weight:700;
+}
+
+.navbar-header{
+	width:100%;
+}
+
+ul.nav.navbar-nav{
+	display:inline-block;
+	padding:0 auto;
+	text-align: center;
+	margin:0 auto;
+	float: none;
+}
+
+#login{
+	margin-top:11px;
+}
+
+.navbar-toggle{
+	float:left;	
+}
+
+.content{
+	background-color:#eee6ff;
+}
