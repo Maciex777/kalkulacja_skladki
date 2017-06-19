@@ -1,10 +1,10 @@
 body{
-		font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .navbar{
 	margin-bottom: 0;
-    border-radius: 0;
+    	border-radius: 0;
 	background-color:white;
 	border-bottom:2px solid black;
 	float:none;
@@ -68,4 +68,50 @@ ul.nav.navbar-nav{
 
 .content{
 	background-color:#eee6ff;
+}
+
+table, td{
+	border:2px solid black;
+	font-size:17px;
+	background-color:#f2f2f2;
+}
+
+td{
+	text-align:center;
+}
+
+.highlighted{
+	position: relative;
+	-webkit-box-shadow: 0 0 36px 6px rgba(50, 205, 50,1);
+	-moz-box-shadow: 0 0 36px 6px rgba(50, 205, 50,1);
+	box-shadow: 0 0 36px 6px rgba(50, 205, 50,1);	
+	z-index: 100;
+	background-color:white;	
+	font-weight:700;
+}
+
+.highlighted2{
+	position: relative;
+	-webkit-box-shadow: 0 10px 36px 6px rgba(50, 205, 50,1);
+	-moz-box-shadow: 0 10px 36px 6px rgba(50, 205, 50,1);
+	box-shadow: 0 10px 36px 6px rgba(50, 205, 50,1);	
+	z-index: 100;
+	background-color:white;	
+	font-weight:700;
+}
+
+table{
+	margin:15px 0;
+}
+
+#totalInput{
+	color:#0600b3;
+	font-size:28px;
+	font-weight:700;
+	margin-bottom:30px;	
+}
+
+footer{
+	font-size:10px;
+	height:10px;
 }
