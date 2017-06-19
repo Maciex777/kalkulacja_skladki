@@ -107,3 +107,67 @@ function updateSumInput(val) {
 	  total();
 	}	
 };
+
+//obliczenie składki bez zniżek/zwyżek - osobna sekcja dla natychmiastowej reakcji dla pól wyboru
+function count(){
+	var val = document.getElementById('textInput').value;
+	if(val < 1001){
+	  lb1 = 20;
+	  total();
+	} else if (val > 1000 && val < 3001){
+	  lb1 = 70;
+	  total();
+	} else if (val > 3000 && val < 6001){
+	  lb1 = 130;
+	  total();
+	} else if (val > 6000 && val < 9001){
+	  lb1 = 180;
+	  total();
+	} else if (val > 9000){
+	  lb1 = 200;
+	  total();
+	}	
+}
+
+//podświetlenie info w tabeli po wybraniu pól wyboru w sekcji "status ubezpieczenia" i uruchomienie funkcji count()
+function updateStatusInput() {
+	var d = document.getElementsByClassName('td2');
+        for (var g = 0; g < d.length; g++) {
+            $(d[g]).removeClass('highlighted highlighted2');			
+        }
+	if(document.getElementById('bezszkod').checked==true){
+		$('#bezszkody').addClass('highlighted');
+		$('#procent1').addClass('highlighted');   
+		count();
+	}else if(document.getElementById('zeszkod').checked==true){
+		$('#szkoda').addClass('highlighted');
+		$('#procent2').addClass('highlighted');
+		count();
+		if(document.getElementById('zeszkod').checked==true && document.getElementById('jednoraz').checked==true){
+			$('#jednoraz2').addClass('highlighted2');
+		} 
+	}
+};
+
+//podświetlenie info w tabeli po wybraniu pól wyboru w sekcji "możliwe formy płatności" i uruchomienie funkcji count()
+function updateRatyInput() {
+		var f = document.getElementsByClassName('td3');
+        for (var g = 0; g < f.length; g++) {
+            $(f[g]).removeClass('highlighted highlighted2');			
+        }
+	if(document.getElementById('jednoraz').checked==true){
+		$('#procent3').addClass('highlighted');  
+		if(document.getElementById('zeszkod').checked==true && document.getElementById('jednoraz').checked==true){
+			$('#jednoraz2').addClass('highlighted2');
+		} else {
+		$('#jednoraz2').addClass('highlighted');
+		}
+		count();
+	}else if(document.getElementById('dwieraty').checked==true){
+		count();	
+	}else if(document.getElementById('czteryraty').checked==true){
+		$('#czteryraty2').addClass('highlighted');
+		$('#procent4').addClass('highlighted'); 
+		count();	
+	}
+};	
