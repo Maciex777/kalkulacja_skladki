@@ -38,3 +38,72 @@ function total(){
 	    document.getElementById('totalInput').innerHTML="Zaznacz status ubezpieczenia i formę płatności";
 	  }	
 };
+
+//obliczenie składki bez zniżek/zwyżek i podświetlenie info w tabeli po przesunięciu suwaka
+function updateTextInput(val) {
+	  document.getElementById('textInput').value=val; 	
+	  var t = document.getElementsByClassName('td');
+        for (var g = 0; g < t.length; g++) {
+            $(t[g]).removeClass('highlighted');
+        }
+	if(val < 1001){
+	  $('#first').addClass('highlighted');
+	  $('#first2').addClass('highlighted');
+	  lb1 = 20;
+	  total();
+	} else if (val > 1000 && val < 3001){
+	  $('#second').addClass('highlighted');
+	  $('#second2').addClass('highlighted');
+	  lb1 = 70;
+	  total();
+	} else if (val > 3000 && val < 6001){
+	  $('#third').addClass('highlighted');
+	  $('#third2').addClass('highlighted');
+	  lb1 = 130;
+	  total();
+	} else if (val > 6000 && val < 9001){
+	  $('#fourth').addClass('highlighted');
+	  $('#fourth2').addClass('highlighted');
+	  lb1 = 180;
+	  total();
+	} else if (val > 9000){
+	  $('#fifth').addClass('highlighted');
+	  $('#fifth2').addClass('highlighted');
+	  lb1 = 200;
+	  total();
+	}	
+};
+	
+//obliczenie składki bez zniżek/zwyżek i podświetlenie info w tabeli po wprowadzeniu liczby w pole	
+function updateSumInput(val) {			
+		var t = document.getElementsByClassName('td');
+        for (var g = 0; g < t.length; g++) {
+            $(t[g]).removeClass('highlighted');
+        }
+	if(val < 1001){
+	  $('#first').addClass('highlighted');
+	  $('#first2').addClass('highlighted');
+	  lb1 = 20;
+	  total();
+	} else if (val > 1000 && val < 3001){
+	  $('#second').addClass('highlighted');
+	  $('#second2').addClass('highlighted');
+	  lb1 = 70;
+	  total();
+	} else if (val > 3000 && val < 6001){
+	  $('#third').addClass('highlighted');
+	  $('#third2').addClass('highlighted');
+	  lb1 = 130;
+	  total();
+	} else if (val > 6000 && val < 9001){
+	  $('#fourth').addClass('highlighted');
+	  $('#fourth2').addClass('highlighted');
+	  lb1 = 180;
+	  total();
+	} else if (val > 9000){
+	  $('#fifth').addClass('highlighted');
+	  $('#fifth2').addClass('highlighted');
+	  lb1 = 200;
+	  total();
+	}	
+};
