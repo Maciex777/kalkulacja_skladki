@@ -44,31 +44,31 @@ function updateTextInput(val) {
 	  document.getElementById('textInput').value=val; 	
 	  var t = document.getElementsByClassName('td');
         for (var g = 0; g < t.length; g++) {
-            $(t[g]).removeClass('highlighted');
+            t[g].classList.remove("highlighted");
         }
 	if(val < 1001){
-	  $('#first').addClass('highlighted');
-	  $('#first2').addClass('highlighted');
+	  document.getElementById("first").classList.add("highlighted");
+	  document.getElementById("first2").classList.add("highlighted");
 	  lb1 = 20;
 	  total();
 	} else if (val > 1000 && val < 3001){
-	  $('#second').addClass('highlighted');
-	  $('#second2').addClass('highlighted');
+	  document.getElementById("second").classList.add("highlighted");
+	  document.getElementById("second2").classList.add("highlighted");
 	  lb1 = 70;
 	  total();
 	} else if (val > 3000 && val < 6001){
-	  $('#third').addClass('highlighted');
-	  $('#third2').addClass('highlighted');
+	  document.getElementById("third").classList.add("highlighted");
+	  document.getElementById("third2").classList.add("highlighted");
 	  lb1 = 130;
 	  total();
 	} else if (val > 6000 && val < 9001){
-	  $('#fourth').addClass('highlighted');
-	  $('#fourth2').addClass('highlighted');
+	  document.getElementById("fourth").classList.add("highlighted");
+	  document.getElementById("fourth2").classList.add("highlighted");
 	  lb1 = 180;
 	  total();
 	} else if (val > 9000){
-	  $('#fifth').addClass('highlighted');
-	  $('#fifth2').addClass('highlighted');
+	  document.getElementById("fifth").classList.add("highlighted");
+	  document.getElementById("fifth2").classList.add("highlighted");
 	  lb1 = 200;
 	  total();
 	}	
@@ -78,31 +78,31 @@ function updateTextInput(val) {
 function updateSumInput(val) {			
 		var t = document.getElementsByClassName('td');
         for (var g = 0; g < t.length; g++) {
-            $(t[g]).removeClass('highlighted');
+            t[g].classList.remove("highlighted");
         }
 	if(val < 1001){
-	  $('#first').addClass('highlighted');
-	  $('#first2').addClass('highlighted');
+	  document.getElementById("first").classList.add("highlighted");
+	  document.getElementById("first2").classList.add("highlighted");
 	  lb1 = 20;
 	  total();
 	} else if (val > 1000 && val < 3001){
-	  $('#second').addClass('highlighted');
-	  $('#second2').addClass('highlighted');
+	  document.getElementById("second").classList.add("highlighted");
+	  document.getElementById("second2").classList.add("highlighted");
 	  lb1 = 70;
 	  total();
 	} else if (val > 3000 && val < 6001){
-	  $('#third').addClass('highlighted');
-	  $('#third2').addClass('highlighted');
+	  document.getElementById("third").classList.add("highlighted");
+	  document.getElementById("third2").classList.add("highlighted");
 	  lb1 = 130;
 	  total();
 	} else if (val > 6000 && val < 9001){
-	  $('#fourth').addClass('highlighted');
-	  $('#fourth2').addClass('highlighted');
+	  document.getElementById("fourth").classList.add("highlighted");
+	  document.getElementById("fourth2").classList.add("highlighted");
 	  lb1 = 180;
 	  total();
 	} else if (val > 9000){
-	  $('#fifth').addClass('highlighted');
-	  $('#fifth2').addClass('highlighted');
+	  document.getElementById("fifth").classList.add("highlighted");
+	  document.getElementById("fifth2").classList.add("highlighted");
 	  lb1 = 200;
 	  total();
 	}	
@@ -133,18 +133,19 @@ function count(){
 function updateStatusInput() {
 	var d = document.getElementsByClassName('td2');
         for (var g = 0; g < d.length; g++) {
-            $(d[g]).removeClass('highlighted highlighted2');			
+            d[g].classList.remove('highlighted');			
+            d[g].classList.remove('highlighted2');			
         }
 	if(document.getElementById('bezszkod').checked==true){
-		$('#bezszkody').addClass('highlighted');
-		$('#procent1').addClass('highlighted');   
+		document.getElementById('bezszkody').classList.add('highlighted');
+		document.getElementById('procent1').classList.add('highlighted');   
 		count();
 	}else if(document.getElementById('zeszkod').checked==true){
-		$('#szkoda').addClass('highlighted');
-		$('#procent2').addClass('highlighted');
+		document.getElementById('szkoda').classList.add('highlighted');
+		document.getElementById('procent2').classList.add('highlighted');
 		count();
 		if(document.getElementById('zeszkod').checked==true && document.getElementById('jednoraz').checked==true){
-			$('#jednoraz2').addClass('highlighted2');
+			document.getElementById('jednoraz2').classList.add('highlighted2');
 		} 
 	}
 };
@@ -153,21 +154,22 @@ function updateStatusInput() {
 function updateRatyInput() {
 		var f = document.getElementsByClassName('td3');
         for (var g = 0; g < f.length; g++) {
-            $(f[g]).removeClass('highlighted highlighted2');			
+            f[g].classList.remove('highlighted');			
+            f[g].classList.remove('highlighted2');			
         }
 	if(document.getElementById('jednoraz').checked==true){
-		$('#procent3').addClass('highlighted');  
+		document.getElementById('procent3').classList.add('highlighted');
 		if(document.getElementById('zeszkod').checked==true && document.getElementById('jednoraz').checked==true){
-			$('#jednoraz2').addClass('highlighted2');
+			document.getElementById('jednoraz2').classList.add('highlighted2');
 		} else {
-		$('#jednoraz2').addClass('highlighted');
+		document.getElementById('jednoraz2').classList.add('highlighted');
 		}
 		count();
 	}else if(document.getElementById('dwieraty').checked==true){
 		count();	
 	}else if(document.getElementById('czteryraty').checked==true){
-		$('#czteryraty2').addClass('highlighted');
-		$('#procent4').addClass('highlighted'); 
+		document.getElementById('czteryraty2').classList.add('highlighted');
+		document.getElementById('procent4').classList.add('highlighted');
 		count();	
 	}
-};	
+};
